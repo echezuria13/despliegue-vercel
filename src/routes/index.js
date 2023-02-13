@@ -10,8 +10,6 @@ router.get("/", async (req, res) => {
     ...doc.data(),
   }));
 
-  console.log(contacts);
-
   res.send("Bienvenido a mi pagina ayeendo");
 });
 
