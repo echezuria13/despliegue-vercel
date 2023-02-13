@@ -1,8 +1,9 @@
 const express = require("express");
-const app = express();
+const morgan = require("morgan");
 
-app.get("/", (req, res) => {
-  res.send("Bienvenido a mi pagina de inicio");
-});
+const app = express();
+app.use(morgan("dev"));
+
+app.use(require("./routes/index"));
 
 module.exports = app;
